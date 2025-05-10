@@ -1,0 +1,248 @@
+{
+  "autoname": "format:EQ-{####}",
+  "creation": "2025-05-10 17:15:48.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "status_section",
+    "status",
+    "priority",
+    "column_break_4",
+    "creation",
+    "scheduled_time",
+    "sent_time",
+    "recipient_section",
+    "recipient",
+    "recipient_email",
+    "contact",
+    "column_break_11",
+    "campaign",
+    "campaign_step",
+    "sender_section",
+    "email_provider",
+    "email_account",
+    "column_break_17",
+    "sender_name",
+    "sender_email",
+    "message_section",
+    "subject",
+    "message",
+    "html_message",
+    "section_break_24",
+    "attachments",
+    "error_section",
+    "error",
+    "retry_count"
+  ],
+  "fields": [
+    {
+      "fieldname": "status_section",
+      "fieldtype": "Section Break",
+      "label": "Status"
+    },
+    {
+      "default": "Queued",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Queued\nScheduled\nSending\nSent\nError\nExpired\nCancelled",
+      "reqd": 1
+    },
+    {
+      "default": "Medium",
+      "fieldname": "priority",
+      "fieldtype": "Select",
+      "label": "Priority",
+      "options": "High\nMedium\nLow"
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "creation",
+      "fieldtype": "Datetime",
+      "label": "Created On",
+      "read_only": 1
+    },
+    {
+      "fieldname": "scheduled_time",
+      "fieldtype": "Datetime",
+      "label": "Scheduled Time"
+    },
+    {
+      "fieldname": "sent_time",
+      "fieldtype": "Datetime",
+      "label": "Sent Time",
+      "read_only": 1
+    },
+    {
+      "fieldname": "recipient_section",
+      "fieldtype": "Section Break",
+      "label": "Recipient"
+    },
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Data",
+      "label": "Recipient Name"
+    },
+    {
+      "fieldname": "recipient_email",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Recipient Email",
+      "options": "Email",
+      "reqd": 1
+    },
+    {
+      "fieldname": "contact",
+      "fieldtype": "Link",
+      "label": "Contact",
+      "options": "Contact"
+    },
+    {
+      "fieldname": "column_break_11",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "campaign",
+      "fieldtype": "Link",
+      "label": "Campaign",
+      "options": "Campaign"
+    },
+    {
+      "fieldname": "campaign_step",
+      "fieldtype": "Link",
+      "label": "Campaign Step",
+      "options": "Campaign Step"
+    },
+    {
+      "fieldname": "sender_section",
+      "fieldtype": "Section Break",
+      "label": "Sender"
+    },
+    {
+      "fieldname": "email_provider",
+      "fieldtype": "Link",
+      "label": "Email Provider",
+      "options": "Email Provider"
+    },
+    {
+      "fieldname": "email_account",
+      "fieldtype": "Link",
+      "label": "Email Account",
+      "options": "Email Account"
+    },
+    {
+      "fieldname": "column_break_17",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "sender_name",
+      "fieldtype": "Data",
+      "label": "Sender Name"
+    },
+    {
+      "fieldname": "sender_email",
+      "fieldtype": "Data",
+      "label": "Sender Email",
+      "options": "Email"
+    },
+    {
+      "fieldname": "message_section",
+      "fieldtype": "Section Break",
+      "label": "Message"
+    },
+    {
+      "fieldname": "subject",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Subject",
+      "reqd": 1
+    },
+    {
+      "fieldname": "message",
+      "fieldtype": "Text Editor",
+      "label": "Message",
+      "reqd": 1
+    },
+    {
+      "fieldname": "html_message",
+      "fieldtype": "Code",
+      "label": "HTML Message",
+      "options": "HTML"
+    },
+    {
+      "fieldname": "section_break_24",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "attachments",
+      "fieldtype": "Table",
+      "label": "Attachments",
+      "options": "Email Queue Attachment"
+    },
+    {
+      "fieldname": "error_section",
+      "fieldtype": "Section Break",
+      "label": "Error"
+    },
+    {
+      "fieldname": "error",
+      "fieldtype": "Text",
+      "label": "Error",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "retry_count",
+      "fieldtype": "Int",
+      "label": "Retry Count",
+      "read_only": 1
+    }
+  ],
+  "modified": "2025-05-10 17:15:48.000000",
+  "modified_by": "Administrator",
+  "module": "Outreach App",
+  "name": "Email Queue",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Outreach Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Outreach User",
+      "share": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

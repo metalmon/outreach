@@ -1,0 +1,188 @@
+{
+  "autoname": "field:provider_name",
+  "creation": "2025-05-10 17:10:48.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "provider_section",
+    "provider_name",
+    "provider_type",
+    "is_active",
+    "description",
+    "column_break_5",
+    "default_sender_name",
+    "default_sender_email",
+    "section_break_8",
+    "limits_section",
+    "daily_email_limit",
+    "hourly_email_limit",
+    "min_interval_seconds",
+    "max_interval_seconds",
+    "column_break_14",
+    "enable_random_intervals",
+    "enable_auto_rotation",
+    "section_break_17",
+    "accounts_section",
+    "email_accounts"
+  ],
+  "fields": [
+    {
+      "fieldname": "provider_section",
+      "fieldtype": "Section Break",
+      "label": "Provider Details"
+    },
+    {
+      "fieldname": "provider_name",
+      "fieldtype": "Data",
+      "label": "Provider Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "provider_type",
+      "fieldtype": "Select",
+      "label": "Provider Type",
+      "options": "SMTP\nAPI\nOther",
+      "reqd": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "column_break_5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "default_sender_name",
+      "fieldtype": "Data",
+      "label": "Default Sender Name"
+    },
+    {
+      "fieldname": "default_sender_email",
+      "fieldtype": "Data",
+      "label": "Default Sender Email",
+      "options": "Email"
+    },
+    {
+      "fieldname": "section_break_8",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "limits_section",
+      "fieldtype": "Section Break",
+      "label": "Sending Limits"
+    },
+    {
+      "default": "50",
+      "description": "Maximum number of emails that can be sent per day across all accounts in this provider",
+      "fieldname": "daily_email_limit",
+      "fieldtype": "Int",
+      "label": "Daily Email Limit"
+    },
+    {
+      "default": "10",
+      "description": "Maximum number of emails that can be sent per hour across all accounts in this provider",
+      "fieldname": "hourly_email_limit",
+      "fieldtype": "Int",
+      "label": "Hourly Email Limit"
+    },
+    {
+      "default": "60",
+      "description": "Minimum time in seconds between consecutive emails",
+      "fieldname": "min_interval_seconds",
+      "fieldtype": "Int",
+      "label": "Minimum Interval (seconds)"
+    },
+    {
+      "default": "300",
+      "description": "Maximum time in seconds between consecutive emails",
+      "fieldname": "max_interval_seconds",
+      "fieldtype": "Int",
+      "label": "Maximum Interval (seconds)"
+    },
+    {
+      "fieldname": "column_break_14",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "description": "If checked, the system will use random intervals between min and max values",
+      "fieldname": "enable_random_intervals",
+      "fieldtype": "Check",
+      "label": "Enable Random Intervals"
+    },
+    {
+      "default": "1",
+      "description": "If checked, the system will automatically rotate between available email accounts",
+      "fieldname": "enable_auto_rotation",
+      "fieldtype": "Check",
+      "label": "Enable Auto Rotation"
+    },
+    {
+      "fieldname": "section_break_17",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "accounts_section",
+      "fieldtype": "Section Break",
+      "label": "Email Accounts"
+    },
+    {
+      "fieldname": "email_accounts",
+      "fieldtype": "Table",
+      "label": "Email Accounts",
+      "options": "Email Account"
+    }
+  ],
+  "modified": "2025-05-10 17:10:48.000000",
+  "modified_by": "Administrator",
+  "module": "Outreach App",
+  "name": "Email Provider",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Outreach Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Outreach User",
+      "share": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

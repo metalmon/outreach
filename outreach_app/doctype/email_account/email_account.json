@@ -1,0 +1,143 @@
+{
+  "creation": "2025-05-10 17:10:48.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "email",
+    "is_active",
+    "status",
+    "column_break_4",
+    "smtp_server",
+    "smtp_port",
+    "use_tls",
+    "section_break_8",
+    "username",
+    "password",
+    "section_break_11",
+    "daily_limit",
+    "hourly_limit",
+    "column_break_14",
+    "daily_count",
+    "hourly_count",
+    "last_used"
+  ],
+  "fields": [
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Email",
+      "options": "Email",
+      "reqd": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Is Active"
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Active\nPaused\nDisabled\nError"
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "smtp_server",
+      "fieldtype": "Data",
+      "label": "SMTP Server",
+      "reqd": 1
+    },
+    {
+      "default": "587",
+      "fieldname": "smtp_port",
+      "fieldtype": "Int",
+      "label": "SMTP Port",
+      "reqd": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "use_tls",
+      "fieldtype": "Check",
+      "label": "Use TLS"
+    },
+    {
+      "fieldname": "section_break_8",
+      "fieldtype": "Section Break",
+      "label": "Authentication"
+    },
+    {
+      "fieldname": "username",
+      "fieldtype": "Data",
+      "label": "Username",
+      "reqd": 1
+    },
+    {
+      "fieldname": "password",
+      "fieldtype": "Password",
+      "label": "Password",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_11",
+      "fieldtype": "Section Break",
+      "label": "Limits and Usage"
+    },
+    {
+      "default": "50",
+      "description": "Maximum number of emails that can be sent per day from this account",
+      "fieldname": "daily_limit",
+      "fieldtype": "Int",
+      "label": "Daily Limit"
+    },
+    {
+      "default": "10",
+      "description": "Maximum number of emails that can be sent per hour from this account",
+      "fieldname": "hourly_limit",
+      "fieldtype": "Int",
+      "label": "Hourly Limit"
+    },
+    {
+      "fieldname": "column_break_14",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "daily_count",
+      "fieldtype": "Int",
+      "label": "Daily Count",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "hourly_count",
+      "fieldtype": "Int",
+      "label": "Hourly Count",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_used",
+      "fieldtype": "Datetime",
+      "label": "Last Used",
+      "read_only": 1
+    }
+  ],
+  "istable": 1,
+  "modified": "2025-05-10 17:10:48.000000",
+  "modified_by": "Administrator",
+  "module": "Outreach App",
+  "name": "Email Account",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

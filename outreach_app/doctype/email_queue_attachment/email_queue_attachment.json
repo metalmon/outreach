@@ -1,0 +1,35 @@
+{
+  "creation": "2025-05-10 17:15:48.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "file_name",
+    "file_path"
+  ],
+  "fields": [
+    {
+      "fieldname": "file_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "File Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "file_path",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "File Path",
+      "reqd": 1
+    }
+  ],
+  "istable": 1,
+  "modified": "2025-05-10 17:15:48.000000",
+  "modified_by": "Administrator",
+  "module": "Outreach App",
+  "name": "Email Queue Attachment",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

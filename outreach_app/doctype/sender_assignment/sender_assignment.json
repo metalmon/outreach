@@ -1,0 +1,126 @@
+{
+  "autoname": "format:SA-{contact}-{####}",
+  "creation": "2025-05-10 17:10:48.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "contact",
+    "email_account",
+    "email_provider",
+    "column_break_4",
+    "assigned_date",
+    "is_active",
+    "section_break_7",
+    "campaign",
+    "last_email_sent",
+    "total_emails_sent"
+  ],
+  "fields": [
+    {
+      "fieldname": "contact",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Contact",
+      "options": "Contact",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email_account",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Email Account",
+      "options": "Email Account",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email_provider",
+      "fieldtype": "Link",
+      "label": "Email Provider",
+      "options": "Email Provider",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "assigned_date",
+      "fieldtype": "Datetime",
+      "label": "Assigned Date",
+      "reqd": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active"
+    },
+    {
+      "fieldname": "section_break_7",
+      "fieldtype": "Section Break",
+      "label": "Usage"
+    },
+    {
+      "fieldname": "campaign",
+      "fieldtype": "Link",
+      "label": "Campaign",
+      "options": "Campaign"
+    },
+    {
+      "fieldname": "last_email_sent",
+      "fieldtype": "Datetime",
+      "label": "Last Email Sent",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "total_emails_sent",
+      "fieldtype": "Int",
+      "label": "Total Emails Sent",
+      "read_only": 1
+    }
+  ],
+  "modified": "2025-05-10 17:10:48.000000",
+  "modified_by": "Administrator",
+  "module": "Outreach App",
+  "name": "Sender Assignment",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Outreach Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Outreach User",
+      "share": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

@@ -1,0 +1,19 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+include LICENSE
+recursive-include outreach_app *.css
+recursive-include outreach_app *.csv
+recursive-include outreach_app *.html
+recursive-include outreach_app *.ico
+recursive-include outreach_app *.js
+recursive-include outreach_app *.json
+recursive-include outreach_app *.md
+recursive-include outreach_app *.png
+recursive-include outreach_app *.py
+recursive-include outreach_app *.svg
+recursive-include outreach_app *.txt
+recursive-exclude outreach_app *.pyc
